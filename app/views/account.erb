@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <title>title</title>
-    <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">  
+    <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    
-
+    <% if Helpers.is_logged_in?(session) %>
+      <label for="name">Account Holder: </label>
+        <p name="name"><%=@user.username%></p>
+      <label for="balance">Balance: </label>
+        <p name="balance"><%=@user.balance%></p>
+    <% end %>
   </body>
 </html>
