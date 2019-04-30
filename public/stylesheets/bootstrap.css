@@ -13,6 +13,9 @@ html {
 body {
   margin: 0;
 }
+form{
+    background-color: rgba(50, 115, 220, 0.3);
+}
 article,
 aside,
 details,
